@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>aula 4</title>
+    <link rel="stylesheet" href="css.css">
+ 
+    <body>
+        
+<p id="demo">PEDRO HENRIQUE.</p>
+
+    <button type="button"
+    onclick='document.getElementById("demo").innerHTML = "GUIZELLINI"'>
+    OU </button>
+    <br> <br>
+
+    <!-- ----------------------------------------------------------------------- -->
+
+
+    <!-- ----------------------------------------------------------------------- -->
+
+    <h3 id="texto">Abandonei a vida de caçador.</h3>
+    <button type="button"
+    onclick="document.getElementById('texto').style.display='none'">
+    Clique aqui para ocultar a frase!</button>
+        <br>
+
+    <!-- ----------------------------------------------------------------------- -->
+    
+    <p id="soma"></p>
+    <script>document.getElementById("soma").innerHTML = 5 + 6; </script>
+
+    <BUtton>IMPRIMA AQUI</BUtton>
+    <window. print()>
+
+    <p id="hello"></p>
+
+    <p id="saudacao"></p>
+
+    <p id="switch"></p>
+    
+    <p id="tabuada"></p>
+
+    <p id="carro"></p>
+
+    <p id="materia"></p>
+
+
+<script>
+    var x = minha_funcao(2,5)
+    
+    function minha_funcao(num1, num2){
+        return num1 + num2;
+    }
+
+    document.getElementById("hello").innerHTML = x;
+
+    
+</script>
+
+
+
+
+<script>
+
+var hora = new Date().getHours();
+if (hora < 12) {
+saudacao = "Bom dia!";
+} else if (hora < 20) {
+saudacao = "Boa tarde!";
+} else {
+saudacao = "Boa noite!";
+}
+document.getElementById("saudacao").innerHTML = saudacao;
+</script>
+
+<!--  aqui vai ser o switch-->
+<script>
+
+    var genero = prompt("digite")
+
+switch(genero)
+{
+    case "M":
+    genero= "Seja bem vindo!"
+break;
+    case "F":
+        genero= "Seja bem vinda!"
+    }
+
+    document.getElementById("switch").innerHTML = genero;
+    </script>
+    <p>Acompanhe os nomes das suas materias, abaixo:</p>
+   <script>
+    var disciplinas = 
+    ["linguagem e interação", "fundamentos de programação da internet", "arquitetura e organixação de computadores", "Economia e Sociedade", "Legislação aplicada a tecnologia" ];
+    
+    var listaDisciplinas = document.createElement('ul');
+
+    for (var i = 0; i < disciplinas.length; i++) {
+        var disciplina = document.createElement('li');
+        disciplina.textContent = disciplinas[i];
+        listaDisciplinas.appendChild(disciplina);
+}
+    document.body.appendChild(listaDisciplinas);
+
+    var text = "";
+    i=0;
+    while (i < 5) {
+        text += "<br>A Materia é " + disciplinas[i];
+
+        document.getElementById("materia").innerHTML = text;
+    i++;
+    }
+    
+    var numeros = ["8", "16", "24", "32", "40", "48", "56", "64", "72", "80"];
+    var text = "";
+    var i;
+    for (i = 0; i < numeros.length; i++) {
+    text += numeros[i] + "<br>";
+    document.getElementById("tabuada").innerHTML = text;
+    }
+    
+    
+    var txt = "";
+    var carro = {nome:"mc laren", marca:"mc laren", Ano:2023, motor:"V8 win-turbo", cor:"azul"};
+    
+    for (atributo in carro) {
+    txt += carro[atributo] + " ";
+    }
+    document.getElementById("carro").innerHTML = txt;
+    </script>
+
+
+
+
+</body>
+</html>
